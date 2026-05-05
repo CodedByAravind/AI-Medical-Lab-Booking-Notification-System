@@ -77,9 +77,13 @@ http://127.0.0.1:5000
 ## Project Structure
 
 project-folder/ 
+
 │── app.py 
+
 │── index.html 
+
 │── leads.csv 
+
 │── README.md
 
 
