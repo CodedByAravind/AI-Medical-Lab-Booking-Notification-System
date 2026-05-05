@@ -18,7 +18,16 @@ It demonstrates how real-world business processes can be streamlined using autom
 
 ## Workflow Architecture
 
-User (Chat Interface) ↓ Flask Backend ↓ Processing Logic (Rule-based AI) ↓ Database (CSV file) ↓ Automated Notifications (Threading) ↓ Response to User
+User (Chat Interface) 
+↓ 
+Flask Backend 
+↓ 
+Processing Logic (Rule-based AI)
+↓ 
+Database (CSV file)
+↓ Automated Notifications (Threading) 
+↓ 
+Response to User
 
 ## Tech Stack
 
@@ -35,15 +44,17 @@ The system uses a rule-based approach to:
 * Understand user intent (booking, queries, reports)
 * Extract structured data from natural input
 * Handle flexible formats like:
+  
 James, Blood Test, 23-12-2026
+
 23-12-2026, urine, James
 
 ## Booking Flow
 
-1.User requests booking
-2.System prompts for details
-3.User enters: Name, Test, Date
-4.System:
+1. User requests booking
+2. System prompts for details
+3. User enters: Name, Test, Date
+4. System:
 - Validates input
 - Stores data in leads.csv
 - Confirms booking
