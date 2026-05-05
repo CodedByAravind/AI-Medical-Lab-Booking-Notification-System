@@ -18,15 +18,16 @@ It demonstrates how real-world business processes can be streamlined using autom
 
 ## Workflow Architecture
 
-User (Chat Interface) 
-↓ 
-Flask Backend 
-↓ 
-Processing Logic (Rule-based AI)
-↓ 
-Database (CSV file)
-↓ Automated Notifications (Threading) 
-↓ 
+User (Chat Interface)  
+↓  
+Flask Backend  
+↓  
+Processing Logic (Rule-based AI)  
+↓  
+Database (CSV File)  
+↓  
+Automated Notifications (Threading)  
+↓  
 Response to User
 
 ## Tech Stack
