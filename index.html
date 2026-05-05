@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab Booking Assistant</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #ece5dd;
+        }
+
+        .chat-container {
+            width: 400px;
+            margin: 50px auto;
+            background: #fff;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            height: 500px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+
+        .chat-header {
+            background: #1100ff;
+            color: white;
+            padding: 10px;
+            font-size: 18px;
+        }
+
+        .chat-box {
+            flex: 1;
+            padding: 10px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .message {
+            margin: 6px 0;
+            padding: 8px 12px;
+            border-radius: 10px;
+            max-width: 70%;
+            word-wrap: break-word;
+        }
+        .chat-container {
+            overflow: hidden;
+        }
+        .user {
+            background: #7cccf8;
+            align-self: flex-end;  
+        }
+
+        .bot {
+            background: #f1f0f0;
+            align-self: flex-start;
+        }
+
+        .chat-input {
+            display: flex;
+            border-top: 1px solid #ccc;
+        }
+
+        .chat-input input {
+            flex: 1;
+            padding: 10px;
+            border: none;
+        }
+
+        .chat-input button {
+            background: #0800ff;
+            color: white;
+            border: none;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="chat-container">
+    <div class="chat-header">Lab Booking Assistant</div>
+
+    <div id="chat" class="chat-box"></div>
+
+    <div class="chat-input">
+        <input id="msg" placeholder="Type a message">
+        <button onclick="send()">Send</button>
+    </div>
+</div>
+
+<script>
+async function send() {
+    let input = document.getElementById("msg");
+    let msg = input.value;
+
+    if (!msg.trim()) return;
+
+    let chat = document.getElementById("chat");
+
+    chat.innerHTML += `<div class="message user">${msg}</div>`;
+
+    let res = await fetch("/chat", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({message: msg})
+    });
+
+    let data = await res.json();
+
+    chat.innerHTML += `<div class="message bot">${data.reply}</div>`;
+
+    input.value = "";  
+
+    chat.scrollTop = chat.scrollHeight; 
+}
+</script>
+
+</body>
+</html>

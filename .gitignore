@@ -1,0 +1,31 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.env/
+.env.*
+
+# Flask stuff
+instance/
+.webassets-cache
+
+# Logs
+*.log
+
+# CSV / data files (optional)
+# Uncomment if you don’t want to upload leads.csv
+# leads.csv
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Environment variables
+.env
