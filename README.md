@@ -46,9 +46,9 @@ The system uses a rule-based approach to:
 * Extract structured data from natural input
 * Handle flexible formats like:
   
-James, Blood Test, 23-12-2026
+  James, Blood Test, 23-12-2026
 
-23-12-2026, urine, James
+  23-12-2026, urine, James
 
 ## Booking Flow
 
@@ -56,9 +56,9 @@ James, Blood Test, 23-12-2026
 2. System prompts for details
 3. User enters: Name, Test, Date
 4. System:
-- Validates input
-- Stores data in leads.csv
-- Confirms booking
+  - Validates input
+  - Stores data in leads.csv
+  - Confirms booking
 
 ## Automation
 
