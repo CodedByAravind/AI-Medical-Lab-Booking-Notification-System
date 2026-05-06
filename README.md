@@ -22,7 +22,7 @@ User (Chat Interface)
 ↓  
 Flask Backend  
 ↓  
-Processing Logic (Rule-based AI)  
+Processing Logic (Rule-based)  
 ↓  
 Database (CSV File)  
 ↓  
